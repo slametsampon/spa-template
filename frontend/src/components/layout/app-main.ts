@@ -71,7 +71,10 @@ export class AppMain extends LitElement {
       },
       {
         path: '/',
-        component: 'page-home', // 💡 Ini default homepage
+        action: async () => {
+          await import('../../pages/home');
+        },
+        component: 'page-home',
       },
       {
         path: '(.*)',
