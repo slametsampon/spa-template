@@ -13,7 +13,7 @@ const pkg = JSON.parse(
 );
 
 let publicPath = '/';
-if (isPreRelease) publicPath = '/tanisoko';
+if (isPreRelease) publicPath = '/lit-template';
 if (isProd) publicPath = '';
 
 const outputDir = path.resolve(__dirname, '../build/frontend');

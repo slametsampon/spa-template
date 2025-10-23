@@ -1,23 +1,23 @@
-- [🌱 TaniSoko – Pilar Digital Pertanian Modern](#-tanisoko--pilar-digital-pertanian-modern)
+- [🌱 lit-template – Pilar Digital Pertanian Modern](#-lit-template--pilar-digital-pertanian-modern)
   - [🎯 Visi](#-visi)
   - [🧰 Teknologi yang Digunakan](#-teknologi-yang-digunakan)
     - [⚛️ Frontend](#️-frontend)
     - [🔧 Backend](#-backend)
     - [📡 IoT Node](#-iot-node)
     - [🛠️ Tools \& DevOps](#️-tools--devops)
-  - [🧱 Arsitektur Sistem TaniSoko](#-arsitektur-sistem-tanisoko)
+  - [🧱 Arsitektur Sistem lit-template](#-arsitektur-sistem-lit-template)
     - [1. 🔌 Firmware Node (ESP32)](#1--firmware-node-esp32)
     - [2. 🖧 Server \& Komunikasi (Raspberry Pi)](#2--server--komunikasi-raspberry-pi)
     - [3. 🧑‍💻 Antarmuka Pengguna (HMI)](#3--antarmuka-pengguna-hmi)
   - [🌐 Domain \& Branding](#-domain--branding)
-  - [✅ Keunggulan TaniSoko](#-keunggulan-tanisoko)
+  - [✅ Keunggulan lit-template](#-keunggulan-lit-template)
   - [✨ Penutup](#-penutup)
 
 ---
 
-# 🌱 TaniSoko – Pilar Digital Pertanian Modern
+# 🌱 lit-template – Pilar Digital Pertanian Modern
 
-**TaniSoko** adalah sistem pertanian presisi berbasis IoT yang dirancang untuk membantu petani dan pengelola lahan dalam memantau serta mengontrol kondisi lingkungan secara real-time. Sistem ini menggabungkan teknologi **edge-computing**, **komunikasi dua arah**, dan **arsitektur modular** untuk mendukung keberlanjutan dan efisiensi di sektor agrikultur.
+**lit-template** adalah sistem pertanian presisi berbasis IoT yang dirancang untuk membantu petani dan pengelola lahan dalam memantau serta mengontrol kondisi lingkungan secara real-time. Sistem ini menggabungkan teknologi **edge-computing**, **komunikasi dua arah**, dan **arsitektur modular** untuk mendukung keberlanjutan dan efisiensi di sektor agrikultur.
 
 ## 🎯 Visi
 
@@ -57,9 +57,9 @@
 
 ---
 
-## 🧱 Arsitektur Sistem TaniSoko
+## 🧱 Arsitektur Sistem lit-template
 
-TaniSoko dirancang dengan pendekatan **Separation of Concern (SoC)** untuk menjaga modularitas dan skalabilitas, memisahkan sistem ke dalam tiga lapisan utama:
+lit-template dirancang dengan pendekatan **Separation of Concern (SoC)** untuk menjaga modularitas dan skalabilitas, memisahkan sistem ke dalam tiga lapisan utama:
 
 ### 1. 🔌 Firmware Node (ESP32)
 
@@ -89,14 +89,14 @@ TaniSoko dirancang dengan pendekatan **Separation of Concern (SoC)** untuk menja
 
 ## 🌐 Domain & Branding
 
-- **Brand Name:** TaniSoko
+- **Brand Name:** lit-template
 - **Makna:** “Tani” (pertanian) + “Soko” (tiang/fondasi) → Pilar digital pertanian.
-- **Rekomendasi Domain:** `tanisoko.id`, `tanisoko.com`, `app.tanisoko.id`
-- **Social Handle:** `@tanisoko` (untuk konsistensi branding)
+- **Rekomendasi Domain:** `lit-template.id`, `lit-template.com`, `app.lit-template.id`
+- **Social Handle:** `@lit-template` (untuk konsistensi branding)
 
 ---
 
-## ✅ Keunggulan TaniSoko
+## ✅ Keunggulan lit-template
 
 - 🌾 Fokus pada pertanian presisi & efisiensi
 - 🔌 Real-time monitoring dan control melalui MQTT
@@ -109,7 +109,7 @@ TaniSoko dirancang dengan pendekatan **Separation of Concern (SoC)** untuk menja
 ## ✨ Penutup
 
 Terima kasih telah bergabung dalam perjalanan kami membangun masa depan pertanian Indonesia yang lebih cerdas dan berdaya saing.  
-Mari bersama membangun **ekosistem teknologi agribisnis** yang tangguh dan adaptif melalui **TaniSoko** — _Pilar Digital Pertanian Modern_.
+Mari bersama membangun **ekosistem teknologi agribisnis** yang tangguh dan adaptif melalui **lit-template** — _Pilar Digital Pertanian Modern_.
 
-> **GitHub:** [github.com-tanisoko](https://github.com/slametsampon/tanisoko) _(placeholder, sesuaikan dengan repo Anda)_  
-> **Kontak:** `info@tanisoko.id` _(placeholder email, ubah sesuai kebutuhan)_
+> **GitHub:** [github.com-lit-template](https://github.com/slametsampon/lit-template) _(placeholder, sesuaikan dengan repo Anda)_  
+> **Kontak:** `info@lit-template.id` _(placeholder email, ubah sesuai kebutuhan)_

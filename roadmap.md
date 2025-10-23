@@ -1,4 +1,4 @@
-- [🗺️ Roadmap Pengembangan TaniSoko](#️-roadmap-pengembangan-tanisoko)
+- [🗺️ Roadmap Pengembangan lit-template](#️-roadmap-pengembangan-lit-template)
   - [🧭 FASE 1 – Fondasi \& Definisi Domain](#-fase-1--fondasi--definisi-domain)
     - [🎯 Tujuan:](#-tujuan)
     - [✅ Task List](#-task-list)
@@ -25,9 +25,9 @@
 
 ---
 
-# 🗺️ Roadmap Pengembangan TaniSoko
+# 🗺️ Roadmap Pengembangan lit-template
 
-**TaniSoko** adalah sistem IoT pertanian presisi yang dibangun sebagai hadiah pensiun dan fondasi bisnis utama jangka panjang. Roadmap ini dirancang untuk mewujudkan sistem secara bertahap, modular, dan berorientasi produksi.
+**lit-template** adalah sistem IoT pertanian presisi yang dibangun sebagai hadiah pensiun dan fondasi bisnis utama jangka panjang. Roadmap ini dirancang untuk mewujudkan sistem secara bertahap, modular, dan berorientasi produksi.
 
 ---
 
@@ -41,7 +41,7 @@ Menetapkan visi, cakupan domain, dan struktur data dasar sistem.
 
 ### ✅ Task List
 
-- [ ] Menyusun visi dan misi sistem TaniSoko
+- [ ] Menyusun visi dan misi sistem lit-template
 - [ ] Mendefinisikan vertikal utama:
   - [ ] Hortikultura
   - [ ] Hidroponik
@@ -161,9 +161,9 @@ Mengembangkan firmware modular ESP32 dengan komunikasi MQTT aktif.
 - [ ] Implementasi sensor (suhu, kelembaban, TDS)
 - [ ] Implementasi kontrol aktuator (relay)
 - [ ] Publikasi data ke:
-- [ ] `tanisoko/sensor/{device_id}`
+- [ ] `lit-template/sensor/{device_id}`
 - [ ] Subskripsi topik kontrol:
-- [ ] `tanisoko/control/{device_id}`
+- [ ] `lit-template/control/{device_id}`
 - [ ] Tambah Web Server lokal (SPIFFS) untuk konfigurasi dasar
 
 ---
@@ -222,11 +222,11 @@ Menjalankan sistem di lapangan terbatas & dokumentasi deployment.
 
 ## ✨ Penutup
 
-Dokumen roadmap ini adalah kompas jangka pendek dan menengah untuk membangun **TaniSoko sebagai pilar digital pertanian modern**.  
+Dokumen roadmap ini adalah kompas jangka pendek dan menengah untuk membangun **lit-template sebagai pilar digital pertanian modern**.  
 Silakan gunakan secara fleksibel, sesuaikan dengan waktu dan sumber daya yang tersedia.
 
 > Diperbarui: Oktober 2025  
-> Oleh: Slamet – Pemilik & Arsitek TaniSoko
+> Oleh: Slamet – Pemilik & Arsitek lit-template
 
 ```
 
