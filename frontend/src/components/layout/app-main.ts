@@ -4,7 +4,6 @@ import { LitElement, html } from 'lit';
 import { customElement, property, state, query } from 'lit/decorators.js';
 import { Router } from '@vaadin/router';
 import { AuthService, PERMS, type Role } from '../../services/auth-service';
-import '../../pages/home';
 
 @customElement('app-main')
 export class AppMain extends LitElement {
@@ -61,6 +60,13 @@ export class AppMain extends LitElement {
           await import('../../pages/about');
         },
         component: 'page-about',
+      },
+      {
+        path: '/dashboard',
+        action: async () => {
+          await import('../../pages/dashboard');
+        },
+        component: 'page-dashboard',
       },
       {
         path: '/not-authorized',
