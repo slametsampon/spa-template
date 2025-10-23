@@ -1,4 +1,5 @@
 // frontend/src/components/layout/app-main.ts
+
 import { LitElement, html } from 'lit';
 import { customElement, property, state, query } from 'lit/decorators.js';
 import { Router } from '@vaadin/router';
@@ -54,33 +55,6 @@ export class AppMain extends LitElement {
         },
         component: 'page-login',
       },
-      // {
-      //   path: '/dashboard', // minimal operator
-      //   action: async (ctx, commands) => {
-      //     const g = requireRoleAtLeast('operator')(ctx, commands);
-      //     if (g) return g;
-      //     await import('../../pages/dashboard');
-      //   },
-      //   component: 'page-dashboard',
-      // },
-      // {
-      //   path: '/config', // minimal engineer (admin juga boleh)
-      //   action: async (ctx, commands) => {
-      //     const g = requireRoleAtLeast('engineer')(ctx, commands);
-      //     if (g) return g;
-      //     await import('../../pages/config');
-      //   },
-      //   component: 'page-config',
-      // },
-      // {
-      //   path: '/control', // perlu permission spesifik operate equipment
-      //   action: async (ctx, commands) => {
-      //     const g = requirePerm(PERMS.OPERATE_EQUIPMENT)(ctx, commands);
-      //     if (g) return g;
-      //     await import('../pages/control');
-      //   },
-      //   component: 'page-control',
-      // },
       {
         path: '/about',
         action: async () => {
@@ -95,50 +69,17 @@ export class AppMain extends LitElement {
         },
         component: 'page-not-authorized',
       },
-      { path: '/', component: 'page-home' },
-      // {
-      //   path: '/produksi/hidroponik',
-      //   action: async (ctx, commands) => {
-      //     const g = requireRoleAtLeast('operator')(ctx, commands);
-      //     if (g) return g;
-      //     await import('../../pages/produksi/hidroponik');
-      //   },
-      //   component: 'hidroponik-page',
-      // },
-      // {
-      //   path: '/produksi/hortikultura',
-      //   action: async (ctx, commands) => {
-      //     const g = requireRoleAtLeast('operator')(ctx, commands);
-      //     if (g) return g;
-      //     await import('../../pages/produksi/hortikultura');
-      //   },
-      //   component: 'hortikultura-page',
-      // },
-      // {
-      //   path: '/produksi/akuakultur',
-      //   action: async (ctx, commands) => {
-      //     const g = requireRoleAtLeast('operator')(ctx, commands);
-      //     if (g) return g;
-      //     await import('../../pages/produksi/akuakultur');
-      //   },
-      //   component: 'akuakultur-page',
-      // },
-      // {
-      //   path: '/produksi/peternakan',
-      //   action: async (ctx, commands) => {
-      //     const g = requireRoleAtLeast('operator')(ctx, commands);
-      //     if (g) return g;
-      //     await import('../../pages/produksi/peternakan');
-      //   },
-      //   component: 'peternakan-page',
-      // },
-      // {
-      //   path: '(.*)',
-      //   action: async () => {
-      //     await import('../../pages/not-found');
-      //   },
-      //   component: 'page-not-found',
-      // },
+      {
+        path: '/',
+        component: 'page-home', // 💡 Ini default homepage
+      },
+      {
+        path: '(.*)',
+        action: async () => {
+          await import('../../pages/not-found');
+        },
+        component: 'page-not-found',
+      },
     ]);
 
     window.addEventListener('popstate', this._onPopState);
