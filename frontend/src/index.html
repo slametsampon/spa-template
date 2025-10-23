@@ -1,63 +1,72 @@
+<!-- frontend/src/index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <base href="__BASE_PATH__" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- ✅ SEO Meta Tags -->
-    <title>TaniVerse – Platform Pertanian Cerdas Berbasis IoT</title>
+    <title>lit-template – Starter Template LitElement + Tailwind</title>
     <meta
       name="description"
-      content="TaniVerse adalah platform pertanian cerdas berbasis ESP32, Raspberry Pi, dan teknologi open-source untuk monitoring dan kontrol lingkungan pertanian secara real-time."
+      content="lit-template adalah template proyek siap pakai untuk membangun antarmuka modular berbasis LitElement dan Tailwind CSS."
     />
     <meta
       name="keywords"
-      content="TaniVerse, IoT, ESP32, Raspberry Pi, MQTT, pertanian cerdas, monitoring, fastify, lit, tailwind"
+      content="lit-template, LitElement, Tailwind CSS, Web Components, UI Template, Component Driven Development, esbuild"
     />
-    <meta name="author" content="Tim TaniVerse" />
+    <meta name="author" content="lit-template contributors" />
 
     <!-- ✅ Open Graph / Social Media Sharing -->
     <meta
       property="og:title"
-      content="TaniVerse – Pertanian Cerdas Berbasis IoT"
+      content="lit-template – Starter Template LitElement + Tailwind"
     />
     <meta
       property="og:description"
-      content="Platform open-source untuk pertanian presisi berbasis ESP32 & Raspberry Pi. Monitoring, kontrol, dan edge computing dalam satu sistem."
+      content="Template UI ringan dan modular berbasis Web Components. Cocok untuk proyek dashboard, IoT UI, dan aplikasi web modern."
     />
     <meta property="og:image" content="./assets/raw-logo-crop.png" />
-    <meta
-      property="og:url"
-      content="https://slametsampon.github.io/taniverse/"
-    />
+    <meta property="og:url" content="https://yourdomain.com/lit-template/" />
     <meta property="og:type" content="website" />
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="./assets/raw-logo-crop.png" />
+
+    <!-- ✅ Twitter Card Meta -->
+    <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="TaniVerse – Pertanian Cerdas Berbasis IoT"
+      content="lit-template – Template UI Modular dengan LitElement"
     />
     <meta
       name="twitter:description"
-      content="Platform open-source untuk pertanian presisi berbasis ESP32 & Raspberry Pi. Monitoring, kontrol, dan edge computing dalam satu sistem."
+      content="Template Web Components modular siap pakai dengan dukungan Tailwind dan esbuild."
     />
     <meta name="twitter:image" content="./assets/raw-logo-crop.png" />
-    <meta name="twitter:site" content="@yourtwitter" />
+    <meta name="twitter:site" content="@yourhandle" />
 
+    <!-- ✅ Favicon & Styles -->
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
     <link rel="stylesheet" href="./style.css" />
-    <!-- DEV ONLY: arahkan ke backend lokal -->
+
+    <!-- 🔧 Base URL untuk backend/dev API (optional) -->
     <script>
-      // kosongkan "" jika same-origin / reverse proxy
       window.__API_BASE__ = 'http://127.0.0.1:8080';
     </script>
+
+    <!-- ✅ Entry point -->
     <script type="module" src="./main.js"></script>
   </head>
-  <body class="bg-gray-100 font-sans">
+  <body class="bg-gray-100 font-sans text-gray-800">
+    <!-- Root shell (routing + layout handled here) -->
     <app-shell></app-shell>
+
+    <!-- 💡 Komponen dialog (opsional, bisa dihapus jika belum digunakan) -->
+    <!--
     <device-dialog></device-dialog>
     <plant-detail-dialog></plant-detail-dialog>
     <species-detail-dialog></species-detail-dialog>
     <livestock-detail-dialog></livestock-detail-dialog>
+    -->
   </body>
 </html>

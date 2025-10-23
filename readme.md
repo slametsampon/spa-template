@@ -1,27 +1,12 @@
-- [🌱 lit-template – Pilar Digital Pertanian Modern](#-lit-template--pilar-digital-pertanian-modern)
-  - [🎯 Visi](#-visi)
-  - [🧰 Teknologi yang Digunakan](#-teknologi-yang-digunakan)
-    - [⚛️ Frontend](#️-frontend)
-    - [🔧 Backend](#-backend)
-    - [📡 IoT Node](#-iot-node)
-    - [🛠️ Tools \& DevOps](#️-tools--devops)
-  - [🧱 Arsitektur Sistem lit-template](#-arsitektur-sistem-lit-template)
-    - [1. 🔌 Firmware Node (ESP32)](#1--firmware-node-esp32)
-    - [2. 🖧 Server \& Komunikasi (Raspberry Pi)](#2--server--komunikasi-raspberry-pi)
-    - [3. 🧑‍💻 Antarmuka Pengguna (HMI)](#3--antarmuka-pengguna-hmi)
-  - [🌐 Domain \& Branding](#-domain--branding)
-  - [✅ Keunggulan lit-template](#-keunggulan-lit-template)
-  - [✨ Penutup](#-penutup)
+# 🌱 lit-template – Boilerplate Web UI Modular Berbasis LitElement
+
+**lit-template** adalah _boilerplate_ (template proyek) siap pakai untuk membangun antarmuka web modular berbasis **LitElement**, dengan dukungan penuh terhadap prinsip _Component-Driven Development (CDD)_. Template ini dirancang untuk mempercepat pengembangan UI modern, ringan, dan scalable — cocok untuk integrasi dengan sistem IoT, dashboard realtime, atau aplikasi web mandiri.
 
 ---
 
-# 🌱 lit-template – Pilar Digital Pertanian Modern
-
-**lit-template** adalah sistem pertanian presisi berbasis IoT yang dirancang untuk membantu petani dan pengelola lahan dalam memantau serta mengontrol kondisi lingkungan secara real-time. Sistem ini menggabungkan teknologi **edge-computing**, **komunikasi dua arah**, dan **arsitektur modular** untuk mendukung keberlanjutan dan efisiensi di sektor agrikultur.
-
 ## 🎯 Visi
 
-> Menjadi fondasi digital pertanian Indonesia yang cerdas, efisien, dan berkelanjutan melalui pemanfaatan teknologi terbuka dan terintegrasi.
+> Menyediakan fondasi siap pakai yang _modular, efisien_, dan _terstruktur_ untuk pengembangan antarmuka berbasis Web Components menggunakan LitElement dan Tailwind CSS.
 
 ---
 
@@ -29,87 +14,162 @@
 
 ### ⚛️ Frontend
 
-- **Framework:** LitElement (Web Components)
-- **Styling:** Tailwind CSS (inline class)
-- **Build Tool:** esbuild
+- **Framework:** LitElement (Web Components, TypeScript)
+- **Styling:** Tailwind CSS (inline class utility)
+- **Build Tool:** `esbuild` (super fast bundler)
 - **Arsitektur UI:** Component-Driven Development (CDD)
 
-### 🔧 Backend
+### 🔧 Backend (Opsional)
 
-- **Platform:** Node.js + TypeScript
-- **Framework:** Fastify
-- **API:** RESTful + MQTT Bridge
-- **Database:** SQLite (embedded, local)
+> lit-template dapat berdiri sendiri sebagai UI statis, namun mudah diintegrasikan dengan backend berikut:
 
-### 📡 IoT Node
+- **MQTT via WebSocket** (untuk IoT / real-time dashboard)
+- **REST API** (untuk data retrieval)
+- **Contoh Bridge:** Fastify + MQTT.js (tidak disertakan dalam repo ini)
 
-- **Device:** ESP32
-- **Firmware:** Arduino C++ (OOP)
-- **Protocol:** MQTT (Publish/Subscribe)
-- **Transport:** WiFi
+### 📡 IoT Node (Integrasi Opsional)
+
+Jika digunakan dalam proyek IoT:
+
+- **Device:** ESP32 / ESP8266
+- **Protocol:** MQTT (Pub/Sub)
+- **Transport:** WebSocket / HTTP
+- **Status:** Tidak disertakan dalam template, namun struktur sudah mendukung komunikasi data real-time
 
 ### 🛠️ Tools & DevOps
 
-- **Hosting:** Raspberry Pi 4 (all-in-one deployment)
-- **MQTT Broker:** Mosquitto
-- **Source Control:** GitHub
-- **IDE:** Visual Studio Code + Arduino CE
+- **IDE:** Visual Studio Code
+- **Version Control:** Git + GitHub
+- **Deployment Target:**
+
+  - GitHub Pages (untuk demo)
+  - Raspberry Pi (untuk sistem embedded)
+  - ESP SPIFFS / LittleFS (untuk antarmuka lokal langsung dari perangkat)
 
 ---
 
-## 🧱 Arsitektur Sistem lit-template
+## 🧱 Struktur Proyek lit-template
 
-lit-template dirancang dengan pendekatan **Separation of Concern (SoC)** untuk menjaga modularitas dan skalabilitas, memisahkan sistem ke dalam tiga lapisan utama:
-
-### 1. 🔌 Firmware Node (ESP32)
-
-- Bahasa: C++ (Object-Oriented)
-- IDE: Arduino IDE + Arduino Community Edition
-- Komunikasi: MQTT (Pub/Sub), HTTP (AJAX) – opsional
-- Penyimpanan: SPIFFS / LittleFS
-- Fitur: Web Server lokal untuk konfigurasi & status
-
-### 2. 🖧 Server & Komunikasi (Raspberry Pi)
-
-- Fungsi: Pusat komunikasi & komputasi edge
-- Menjalankan: Mosquitto MQTT Broker
-- Hosting: Web UI berbasis LitElement
-- Bridge: MQTT ↔ WebSocket (untuk frontend real-time)
-- Fitur: Offline capability, jaringan lokal & remote
-
-### 3. 🧑‍💻 Antarmuka Pengguna (HMI)
-
-- Framework: LitElement (Web Components)
-- Styling: Tailwind CSS
-- Koneksi: MQTT over WebSocket ke Raspberry Pi
-- Build Tool: esbuild
-- Deployment: GitHub Pages / Raspberry Pi Static Hosting
+```bash
+lit-template/
+├── frontend/
+│   ├── src/
+│   │   ├── assets/              # File statis (gambar, ikon, dll)
+│   │   ├── components/          # Web Components reusable (LitElement)
+│   │   ├── config/              # Konfigurasi global (env, endpoint, dsb.)
+│   │   ├── context/             # State management (context/provider pattern)
+│   │   ├── pages/               # Halaman modular (rute: login, home, dst.)
+│   │   │   ├── about.ts
+│   │   │   ├── home.ts
+│   │   │   ├── login.ts
+│   │   │   ├── not-authorized.ts
+│   │   │   └── not-found.ts
+│   │   ├── repositories/        # Akses data layer (API, MQTT, dsb.)
+│   │   ├── services/            # Abstraksi logika bisnis
+│   │   ├── index.html           # Entrypoint HTML aplikasi
+│   │   ├── main.ts              # Entrypoint utama frontend (bootstrap app)
+│   │   └── style.css            # Import Tailwind + custom style (jika perlu)
+│   ├── esbuild.config.js        # Konfigurasi bundler esbuild
+│   ├── tailwind.config.js       # Konfigurasi utilitas Tailwind CSS
+│   └── tsconfig.json            # Konfigurasi TypeScript khusus frontend
+├── models/                      # Definisi model data (interface, DTO, dsb.)
+├── node_modules/                # Dependency (auto-generated)
+├── .gitignore                   # Ignore file untuk Git
+├── package-lock.json            # Lockfile npm
+├── package.json                 # Metadata proyek dan dependency
+├── readme.md                    # Dokumentasi proyek
+├── tsconfig.base.json           # Konfigurasi dasar TypeScript (shared config)
+```
 
 ---
 
 ## 🌐 Domain & Branding
 
-- **Brand Name:** lit-template
-- **Makna:** “Tani” (pertanian) + “Soko” (tiang/fondasi) → Pilar digital pertanian.
-- **Rekomendasi Domain:** `lit-template.id`, `lit-template.com`, `app.lit-template.id`
-- **Social Handle:** `@lit-template` (untuk konsistensi branding)
+Template ini dapat digunakan sebagai fondasi untuk berbagai sistem:
+
+- **Nama Bebas** – gunakan branding Anda sendiri.
+- **Contoh Nama:** `farm-hmi`, `iot-dashboard`, `env-monitor`, dll.
+- **Contoh Domain:** `app.farmku.id`, `dashboard.iotsense.dev`, `ui.agrocloud.local`
 
 ---
 
-## ✅ Keunggulan lit-template
+## ✅ Fitur & Keunggulan
 
-- 🌾 Fokus pada pertanian presisi & efisiensi
-- 🔌 Real-time monitoring dan control melalui MQTT
-- 📶 Edge-server berbasis Raspberry Pi
-- 🧩 Modular dan open-source
-- 🧠 Dirancang untuk keberlanjutan & ekspansi skala besar
+- ⚡️ Ultra ringan & cepat berkat _esbuild_
+- 🧩 Modular dengan pendekatan Web Components
+- 🧠 Terstruktur untuk kolaborasi tim (CDD)
+- 📡 Siap integrasi MQTT / WebSocket
+- 🧱 Fleksibel untuk dipakai di proyek IoT, dashboard, atau standalone app
+
+---
+
+## ✨ Cara Menggunakan
+
+### 🔧 Setup Lokal
+
+```bash
+git clone https://github.com/username/lit-template.git
+cd lit-template
+npm install
+npm run dev
+```
+
+### 🔨 Build untuk Produksi
+
+```bash
+npm run build
+```
+
+### 🚀 Deploy ke GitHub Pages
+
+Pastikan branch `gh-pages` diaktifkan:
+
+```bash
+npm run deploy
+```
+
+---
+
+## 🧩 Pengembangan Komponen
+
+Buat komponen baru di folder `src/components`:
+
+```ts
+// src/components/my-button.ts
+import { LitElement, html, css } from 'lit';
+import { customElement } from 'lit/decorators.js';
+
+@customElement('my-button')
+export class MyButton extends LitElement {
+  static styles = css`
+    button {
+      @apply px-4 py-2 bg-blue-500 text-white rounded;
+    }
+  `;
+  render() {
+    return html`<button><slot></slot></button>`;
+  }
+}
+```
+
+Gunakan di `index.html` atau `main.ts`:
+
+```html
+<my-button>Click Me</my-button>
+```
+
+---
+
+## 🤝 Kontribusi
+
+Kami terbuka untuk kolaborasi! Silakan buat issue atau pull request untuk perbaikan, fitur baru, atau dokumentasi tambahan.
 
 ---
 
 ## ✨ Penutup
 
-Terima kasih telah bergabung dalam perjalanan kami membangun masa depan pertanian Indonesia yang lebih cerdas dan berdaya saing.  
-Mari bersama membangun **ekosistem teknologi agribisnis** yang tangguh dan adaptif melalui **lit-template** — _Pilar Digital Pertanian Modern_.
+lit-template adalah titik awal yang ringan namun powerful untuk membangun antarmuka modular modern. Baik untuk keperluan dashboard IoT, sistem monitoring, maupun UI aplikasi lainnya — template ini siap dikembangkan sesuai kebutuhan Anda.
 
-> **GitHub:** [github.com-lit-template](https://github.com/slametsampon/lit-template) _(placeholder, sesuaikan dengan repo Anda)_  
-> **Kontak:** `info@lit-template.id` _(placeholder email, ubah sesuai kebutuhan)_
+> **Repo:** [github.com - lit-template](https://github.com/slametsampon/lit-template)
+
+---

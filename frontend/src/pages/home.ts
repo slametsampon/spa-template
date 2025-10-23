@@ -8,48 +8,48 @@ import '../components/cards/feature-card.js';
 @customElement('page-home')
 export class PageHome extends LitElement {
   createRenderRoot() {
-    return this;
+    return this; // agar Tailwind CSS global tetap aktif
   }
 
   render() {
     return html`
-      <section class="p-6 space-y-6">
+      <section class="p-6 space-y-6 max-w-5xl mx-auto">
         <div>
           <h1 class="text-2xl font-bold text-green-800 mb-2">
-            🌿 Selamat Datang di TaniVerse
+            🎉 Selamat Datang di lit-template
           </h1>
-          <p class="text-gray-700">
-            TaniVerse adalah platform monitoring dan kontrol berbasis IoT untuk
-            sistem pertanian cerdas di berbagai sektor.
+          <p class="text-gray-700 text-base">
+            Template LitElement + Tailwind CSS yang dirancang untuk pengembangan
+            UI modular, ringan, dan siap produksi.
           </p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-4">
           <feature-card
-            title="Hidroponik"
-            icon="🌱"
+            title="Web Components"
+            icon="🧩"
             color="green"
-            description="Pantau suhu, pH, dan nutrisi secara real-time untuk mendukung pertumbuhan tanaman optimal tanpa tanah."
+            description="Bangun antarmuka modular dan reusable dengan LitElement berbasis standar Web."
           ></feature-card>
 
           <feature-card
-            title="Akuakultur"
-            icon="🐟"
+            title="Tailwind CSS"
+            icon="🎨"
             color="blue"
-            description="Monitor kualitas air, aerator, dan kondisi kolam untuk memastikan kesehatan ikan dan efisiensi budidaya."
+            description="Gunakan utility-first CSS langsung di HTML dengan performa tinggi dan style konsisten."
           ></feature-card>
 
           <feature-card
-            title="Peternakan"
-            icon="🐔"
+            title="Build Cepat"
+            icon="⚡"
             color="yellow"
-            description="Kendalikan suhu kandang, ventilasi, dan pencahayaan agar ternak tumbuh sehat dan produktif."
+            description="Didukung oleh esbuild untuk bundling super cepat dan optimalisasi otomatis."
           ></feature-card>
         </div>
 
         <footer class="text-sm text-gray-500 mt-6">
-          Gunakan menu navigasi di atas untuk menjelajahi dashboard
-          masing-masing sektor.
+          Gunakan menu navigasi di atas untuk menjelajahi struktur komponen dan
+          halaman lainnya.
         </footer>
       </section>
     `;

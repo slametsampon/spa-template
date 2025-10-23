@@ -3,6 +3,7 @@
   "version": "1.0.4",
   "description": "Platform for building and running agro apps",
   "main": "index.js",
+  "homepage": "https://slametsampon.github.io/lit-template",
   "scripts": {
     "dev": "concurrently \"npm run tailwind:watch\" \"npm run esbuild:watch:serve\"",
     "esbuild:watch:serve": "cross-env NODE_ENV=development node frontend/esbuild.config.js --watch --serve",
