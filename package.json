@@ -1,6 +1,6 @@
 {
   "name": "spa-template",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Platform for building and running agro apps",
   "main": "index.js",
   "homepage": "https://slametsampon.github.io/spa-template",
