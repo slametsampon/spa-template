@@ -23,7 +23,7 @@ export class AppFooter extends LitElement {
           <span>•</span>
           <div>
             <a
-              href="https://github.com/slametsampon/lit-template"
+              href="https://github.com/slametsampon/spa-template"
               target="_blank"
               >GitHub</a
             >

@@ -13,26 +13,30 @@ export class AboutPage extends LitElement {
     return html`
       <section class="p-6 md:p-10 max-w-5xl mx-auto">
         <h1 class="text-3xl font-bold text-center text-green-700 mb-6">
-          Tentang lit-template
+          Tentang SPA-Template
         </h1>
 
         <p class="text-base text-gray-700 leading-relaxed mb-4">
-          <span class="font-semibold text-green-600">lit-template</span> adalah
-          template proyek siap pakai untuk membangun antarmuka web modular dan
-          modern menggunakan teknologi
-          <span class="font-semibold">LitElement</span> dan
-          <span class="font-semibold">Tailwind CSS</span>. Template ini
-          dirancang untuk mempercepat pengembangan UI dengan pendekatan
-          <span class="font-semibold text-green-600"
-            >Component-Driven Development (CDD)</span
-          >.
+          <span class="font-semibold text-green-600">SPA-Template</span> adalah
+          sebuah kerangka kerja (_template_) berbasis komponen untuk membangun
+          aplikasi web modern dengan pendekatan
+          <span class="font-semibold text-green-600">
+            Single Page Application (SPA)
+          </span>
+          dan
+          <span class="font-semibold text-green-600">
+            Component-Driven Development (CDD) </span
+          >. Template ini memanfaatkan kombinasi LitElement, Tailwind CSS, dan
+          esbuild untuk menghasilkan antarmuka pengguna yang ringan, cepat, dan
+          dapat diandalkan.
         </p>
 
         <p class="text-base text-gray-700 leading-relaxed mb-4">
-          Proyek ini dapat digunakan sebagai fondasi berbagai sistem berbasis
-          web, baik untuk dashboard IoT, sistem informasi, maupun aplikasi
-          mandiri. Dengan arsitektur yang bersih dan terorganisir, lit-template
-          mendukung produktivitas tim dan skalabilitas proyek jangka panjang.
+          Didesain untuk pengembangan modular dan maintainable, SPA-Template
+          menyediakan fondasi yang solid untuk berbagai jenis aplikasi, mulai
+          dari dashboard IoT, sistem informasi internal, hingga aplikasi mandiri
+          berbasis web. Template ini memudahkan tim dalam menyusun dan mengelola
+          komponen UI secara terpisah serta terorganisir.
         </p>
 
         <h2 class="text-xl font-semibold text-green-700 mt-8 mb-4">
@@ -46,7 +50,12 @@ export class AboutPage extends LitElement {
               <li>Framework: <span class="font-medium">LitElement</span></li>
               <li>Styling: <span class="font-medium">Tailwind CSS</span></li>
               <li>Build Tool: <span class="font-medium">esbuild</span></li>
-              <li>Arsitektur: <span class="font-medium">CDD</span></li>
+              <li>
+                Arsitektur:
+                <span class="font-medium"
+                  >CDD (Component-Driven Development)</span
+                >
+              </li>
               <li>Bahasa: <span class="font-medium">TypeScript</span></li>
             </ul>
           </div>
@@ -55,10 +64,12 @@ export class AboutPage extends LitElement {
               Integrasi Opsional
             </h3>
             <ul class="list-disc list-inside text-gray-700">
-              <li>MQTT via WebSocket (untuk sistem IoT)</li>
+              <li>Dukungan MQTT via WebSocket (untuk sistem IoT)</li>
               <li>REST API backend (Fastify, Express, dll)</li>
-              <li>Hosting lokal: Raspberry Pi / Static Host</li>
-              <li>Deployment: GitHub Pages, Vercel, dsb.</li>
+              <li>
+                Kompatibel dengan hosting lokal: Raspberry Pi / Static Host
+              </li>
+              <li>Deployment ke GitHub Pages, Vercel, Netlify, dll.</li>
             </ul>
           </div>
         </div>
@@ -68,14 +79,17 @@ export class AboutPage extends LitElement {
         </h2>
 
         <p class="text-base text-gray-700 leading-relaxed mb-4">
-          Struktur proyek memisahkan komponen, halaman, layanan data, dan
-          konteks aplikasi agar pengembangan tetap rapi, scalable, dan mudah
-          di-maintain dalam tim.
+          Kode sumber terstruktur berdasarkan pemisahan tanggung jawab:
+          komponen, halaman, layanan data, dan konteks aplikasi dipisahkan dalam
+          direktori yang jelas. Pendekatan ini mendukung kolaborasi tim,
+          pemeliharaan jangka panjang, serta skalabilitas.
         </p>
 
         <p class="text-base text-gray-700 leading-relaxed">
-          lit-template cocok digunakan sebagai basis untuk berbagai jenis
-          aplikasi antarmuka modern — ringan, cepat, dan sepenuhnya open-source.
+          Dengan arsitektur ringan dan berbasis standar web modern,
+          <span class="font-semibold text-green-600">SPA-Template</span> dapat
+          dijadikan fondasi bagi berbagai solusi antarmuka yang responsif,
+          terdistribusi, dan sepenuhnya open-source.
         </p>
       </section>
     `;
