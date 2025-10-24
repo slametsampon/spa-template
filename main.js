@@ -868,7 +868,7 @@ var init_ApiUserRepository = __esm({
 
 // src/services/mock-data.service.ts
 async function fetchMockData(filename) {
-  const path = `./assets/mock/${filename}`;
+  const path = `./assets/mocks/${filename}`;
   console.log(`\u{1F4E5} [fetchMockData] Fetching mock data: ${path}`);
   try {
     const res = await fetch(path);
@@ -2323,11 +2323,7 @@ var AppNav = class extends i4 {
           class="max-w-screen-xl mx-auto px-4 py-2 flex justify-between items-center"
         >
           <a href="/" @click=${this._navigate} class=${this.isActive("")}>
-            <img
-              src="./assets/logo-88x45.png"
-              alt="Logo"
-              class="rounded-xl h-[30px]"
-            />
+            SPA Template
           </a>
           <!-- Hamburger for small screens -->
           <button
@@ -2624,21 +2620,34 @@ var AppFooter = class extends i4 {
   }
   render() {
     return x`
-      <footer>
-        <div class="container">
-          <div>
-            © ${(/* @__PURE__ */ new Date()).getFullYear()} lit-tamplate v${"1.0.4"}. All
-            rights reserved.
+      <footer
+        class="w-full mt-12 border-t border-gray-300 dark:border-gray-700 bg-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-300 text-sm shadow-inner"
+      >
+        <div
+          class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <div class="flex items-center gap-2">
+            <span class="text-base">©</span>
+            <span>
+              ${(/* @__PURE__ */ new Date()).getFullYear()} spa-template v${"1.0.5"} — All
+              rights reserved.
+            </span>
           </div>
-          <span>•</span>
-          <div>
+
+          <div class="flex items-center gap-3">
+            <a
+              href="about"
+              class="text-green-600 dark:text-green-400 hover:underline hover:text-green-700 dark:hover:text-green-300 transition"
+              >About</a
+            >
+            <span class="text-gray-400">|</span>
             <a
               href="https://github.com/slametsampon/spa-template"
               target="_blank"
+              rel="noopener"
+              class="text-blue-600 dark:text-blue-400 hover:underline hover:text-blue-700 dark:hover:text-blue-300 transition"
               >GitHub</a
             >
-            <span>•</span>
-            <a href="about">About</a>
           </div>
         </div>
       </footer>
